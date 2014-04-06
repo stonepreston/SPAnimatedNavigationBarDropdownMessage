@@ -1,7 +1,8 @@
 #  SPAnimatedNavigationBarDropdownMessage
 
 A class for displaying a short message that drops down from a navigation bar 
-![SPAnimatedNavigationBarDropdownMessage](https://raw.githubusercontent.com/stonepreston/SPAnimatedNavigationBarDropdownMessage/master/ScreenShot.png)
+
+![SPAnimatedNavigationBarDropdownMessage Screenshot](https://raw.githubusercontent.com/stonepreston/SPAnimatedNavigationBarDropdownMessage/master/ScreenShot.png)
 
 ## Installation
 
