@@ -15,10 +15,12 @@ You can create SPAnimatedNavigationBarDropdownMessage a property in your viewCon
 
 then alloc and initialize it in your viewController's viewDidLoad method
 
-`//if you dont set this to no, the dropdown view is visible behind the navigation bar when not in use.`
-`self.navigationController.navigationBar.translucent = NO;`
+```
+//if you dont set this to no, the dropdown view is visible behind the navigation bar when not in use.
+self.navigationController.navigationBar.translucent = NO;
     
-`self.message = [[SPAnimatedNavigationBarDropdownMessage alloc] initWithHeight:20.0f andParentNavigationBar:self.navigationController.navigationBar];`
+self.message = [[SPAnimatedNavigationBarDropdownMessage alloc] initWithHeight:20.0f andParentNavigationBar:self.navigationController.navigationBar];
+```
 
 and call the following method when you want to animate the message
 
