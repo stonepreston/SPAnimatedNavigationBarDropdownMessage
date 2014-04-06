@@ -19,6 +19,9 @@
 		3A5818DC18F20CE70048368C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5818C418F20CE60048368C /* UIKit.framework */; };
 		3A5818E418F20CE70048368C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A5818E218F20CE70048368C /* InfoPlist.strings */; };
 		3A5818E618F20CE70048368C /* SPAnimatedNavigationBarDropdownMessageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5818E518F20CE70048368C /* SPAnimatedNavigationBarDropdownMessageTests.m */; };
+		3A5818F018F20CEE0048368C /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5818EF18F20CEE0048368C /* Storyboard.storyboard */; };
+		3A5818F318F20CFF0048368C /* SPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5818F218F20CFF0048368C /* SPViewController.m */; };
+		3A5818F618F20D180048368C /* SPAnimatedNavigationBarDropdownMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A5818F518F20D180048368C /* SPAnimatedNavigationBarDropdownMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,11 @@
 		3A5818E118F20CE70048368C /* SPAnimatedNavigationBarDropdownMessageTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SPAnimatedNavigationBarDropdownMessageTests-Info.plist"; sourceTree = "<group>"; };
 		3A5818E318F20CE70048368C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A5818E518F20CE70048368C /* SPAnimatedNavigationBarDropdownMessageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAnimatedNavigationBarDropdownMessageTests.m; sourceTree = "<group>"; };
+		3A5818EF18F20CEE0048368C /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
+		3A5818F118F20CFF0048368C /* SPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPViewController.h; path = ../SPViewController.h; sourceTree = "<group>"; };
+		3A5818F218F20CFF0048368C /* SPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPViewController.m; path = ../SPViewController.m; sourceTree = "<group>"; };
+		3A5818F418F20D180048368C /* SPAnimatedNavigationBarDropdownMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPAnimatedNavigationBarDropdownMessage.h; sourceTree = SOURCE_ROOT; };
+		3A5818F518F20D180048368C /* SPAnimatedNavigationBarDropdownMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPAnimatedNavigationBarDropdownMessage.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,11 @@
 		3A5818C618F20CE60048368C /* SPAnimatedNavigationBarDropdownMessage */ = {
 			isa = PBXGroup;
 			children = (
+				3A5818EF18F20CEE0048368C /* Storyboard.storyboard */,
+				3A5818F118F20CFF0048368C /* SPViewController.h */,
+				3A5818F218F20CFF0048368C /* SPViewController.m */,
+				3A5818F418F20D180048368C /* SPAnimatedNavigationBarDropdownMessage.h */,
+				3A5818F518F20D180048368C /* SPAnimatedNavigationBarDropdownMessage.m */,
 				3A5818CF18F20CE60048368C /* SPAppDelegate.h */,
 				3A5818D018F20CE60048368C /* SPAppDelegate.m */,
 				3A5818D218F20CE70048368C /* Images.xcassets */,
@@ -222,6 +235,7 @@
 			files = (
 				3A5818CB18F20CE60048368C /* InfoPlist.strings in Resources */,
 				3A5818D318F20CE70048368C /* Images.xcassets in Resources */,
+				3A5818F018F20CEE0048368C /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +254,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5818F618F20D180048368C /* SPAnimatedNavigationBarDropdownMessage.m in Sources */,
 				3A5818CD18F20CE60048368C /* main.m in Sources */,
+				3A5818F318F20CFF0048368C /* SPViewController.m in Sources */,
 				3A5818D118F20CE60048368C /* SPAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
