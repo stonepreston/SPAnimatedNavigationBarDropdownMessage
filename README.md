@@ -27,3 +27,11 @@ and call the following method when you want to animate the message
 
 `[self.message animateDropdownMessageWithText:@"This is a message" durationDown:1.0 delay:10.0 durationUp:1.0];`
 
+You can customize the message using the dropdownView, dropdownLabel, and dropdownHeight properties of your message object. 
+
+```
+//Customize the message
+self.message.dropdownView.backgroundColor = [UIColor blackColor];
+self.message.dropdownLabel.font = [UIFont systemFontOfSize:14.0];
+self.message.dropdownLabel.textColor = [UIColor redColor];
+```
