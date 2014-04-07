@@ -18,8 +18,8 @@
 //used to display the text of the message
 @property (strong,nonatomic) UILabel *dropdownLabel;
 
-//the view the dropdownBelongs to
-@property (strong, nonatomic) UIView *parentView;
+//the navigation bar the dropdownBelongs to
+@property (strong, nonatomic) UINavigationBar *parentNavigationBar;
 
 //used to determine if a dropdown is currently animating or not
 @property(nonatomic, assign) BOOL isAnimating;

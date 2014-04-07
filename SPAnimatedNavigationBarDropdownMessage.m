@@ -16,47 +16,57 @@
     if (self) {
         //perform initial setup of the dropdown
         
-        self.parentView = navigationBar;
+        _parentNavigationBar = navigationBar;
         
         //set the frame where the dropdown will be "hiding"
-        self.dropdownView = [[UIView alloc] initWithFrame:CGRectMake(self.parentView.frame.origin.x, self.parentView.frame.size.height - height, self.parentView.frame.size.width, height)];
+        _dropdownView = [[UIView alloc] initWithFrame:CGRectMake(_parentNavigationBar.frame.origin.x, _parentNavigationBar.frame.size.height - height, _parentNavigationBar.frame.size.width, height)];
         
         //set the height property equal to the height passed in as the frame (this is used in animation calculations)
-        self.dropdownHeight = height;
+        _dropdownHeight = height;
         
         //set the default color of the dropdownView to red
-        self.dropdownView.backgroundColor = [UIColor redColor];
+        _dropdownView.backgroundColor = [UIColor redColor];
         
         //set the label frame
-        self.dropdownLabel = [[UILabel alloc] initWithFrame:self.dropdownView.bounds];
+        _dropdownLabel = [[UILabel alloc] initWithFrame:_dropdownView.bounds];
         
         //set the text alignment for the label to center
-        self.dropdownLabel.textAlignment = NSTextAlignmentCenter;
+        _dropdownLabel.textAlignment = NSTextAlignmentCenter;
         
         //set the font  and font size of the label
-        self.dropdownLabel.font = [UIFont boldSystemFontOfSize:14];
+        _dropdownLabel.font = [UIFont boldSystemFontOfSize:14];
         
         //set the default text color of the label to white
-        self.dropdownLabel.textColor = [UIColor whiteColor];
+        _dropdownLabel.textColor = [UIColor whiteColor];
         
         //set the labels background color to clear
-        self.dropdownLabel.backgroundColor = [UIColor clearColor];
+        _dropdownLabel.backgroundColor = [UIColor clearColor];
         
         //not animating initially
-        self.isAnimating = NO;
+        _isAnimating = NO;
         
         //add label as a subview of the dropdown view
-        [self.dropdownView addSubview:self.dropdownLabel];
+        [_dropdownView addSubview:self.dropdownLabel];
         
-        [self.parentView addSubview:self.dropdownView];
+        [_parentNavigationBar addSubview:self.dropdownView];
         
-        [self.parentView sendSubviewToBack:self.dropdownView];
+        [_parentNavigationBar sendSubviewToBack:self.dropdownView];
         
     }
     return self;
     
     
 }
+
+-(id)init {
+    
+    return [self initWithHeight:20 andParentNavigationBar:nil];
+}
+
+
+
+
+
 
 - (void)animateDropdownMessageWithText:(NSString *)text durationDown:(float)durationDown delay:(float)delay durationUp:(float)durationUp {
     
@@ -67,13 +77,13 @@
         
         [UIView animateWithDuration:durationDown delay:0 options:0 animations:^{
             
-            self.dropdownView.frame = CGRectMake(self.parentView.frame.origin.x, self.parentView.frame.size.height, self.parentView.frame.size.width, self.dropdownHeight);
+            self.dropdownView.frame = CGRectMake(self.parentNavigationBar.frame.origin.x, self.parentNavigationBar.frame.size.height, self.parentNavigationBar.frame.size.width, self.dropdownHeight);
             
         }completion:^(BOOL finished) {
             
             [UIView animateWithDuration:durationUp delay:delay options:0 animations:^{
                 
-                self.dropdownView.frame = CGRectMake(self.parentView.frame.origin.x, self.parentView.frame.size.height - self.dropdownHeight, self.parentView.frame.size.width, self.dropdownHeight);
+                self.dropdownView.frame = CGRectMake(self.parentNavigationBar.frame.origin.x, self.parentNavigationBar.frame.size.height - self.dropdownHeight, self.parentNavigationBar.frame.size.width, self.dropdownHeight);
                 
             } completion:^(BOOL finished) {
                 

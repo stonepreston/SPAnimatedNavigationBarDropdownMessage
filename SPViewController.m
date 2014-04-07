@@ -26,12 +26,18 @@
 	self.navigationController.navigationBar.translucent = NO;
     
     self.message = [[SPAnimatedNavigationBarDropdownMessage alloc] initWithHeight:20.0f andParentNavigationBar:self.navigationController.navigationBar];
+    
+    
+    //Customize the message
+    self.message.dropdownView.backgroundColor = [UIColor blackColor];
+    self.message.dropdownLabel.font = [UIFont systemFontOfSize:14.0];
+    self.message.dropdownLabel.textColor = [UIColor redColor];
 }
 
 
 
 - (IBAction)animateButtonPressed:(id)sender {
     
-    [self.message animateDropdownMessageWithText:@"This is a message" durationDown:1.0 delay:10.0 durationUp:1.0];
+    [self.message animateDropdownMessageWithText:@"This is a message" durationDown:1.0 delay:1.0 durationUp:1.0];
 }
 @end
