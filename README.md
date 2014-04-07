@@ -25,7 +25,7 @@ self.message = [[SPAnimatedNavigationBarDropdownMessage alloc] initWithHeight:20
 
 and call the following method when you want to animate the message
 
-`[self.message animateDropdownMessageWithText:@"This is a message" durationDown:1.0 delay:10.0 durationUp:1.0];`
+`[self.message animateDropdownMessageWithText:@"This is a message" durationDown:1.0 delay:1.0 durationUp:1.0];`
 
 You can customize the message using the dropdownView, dropdownLabel, and dropdownHeight properties of your message object. 
 
